@@ -1,0 +1,52 @@
+<div class="my-4">
+  <h1>Users</h1>
+  <hr>
+  <br>
+  <button (click)="onToggleUser()" class="btn btn-primary">TOGGLE ADD USER</button>
+  <br>
+  <br>
+  <div *ngIf="isActive" class="my-3">
+    <h3>Add User</h3>
+    <hr>
+    <form (submit)="onHandleSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input [(ngModel)]="name" name="name" id="name" type="text" class="form-control" placeholder="Enter name...">
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input [(ngModel)]="username" name="username" id="username" type="text" class="form-control" placeholder="Enter username...">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input [(ngModel)]="email" name="email" id="email" type="text" class="form-control" placeholder="Enter email...">
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input [(ngModel)]="country" name="country" id="country" type="text" class="form-control" placeholder="Enter country...">
+      </div>
+      <button type="submit" class="btn btn-success">ADD</button>
+    </form>
+  </div>
+  <ul *ngFor="let cust of customers" class="list-group my-3">
+    <span (click)="onHandleDelete(cust)" class="close float-right bg-danger pt-2 pb-3 px-3">&times;</span>
+    <li class="list-group-item">
+      <strong>Name:</strong>
+      <span class="float-right">{{ cust.name }}</span>
+    </li>
+    <li class="list-group-item">
+      <strong>Username:</strong>
+      <span class="float-right">{{ cust.username }}</span>
+    </li>
+    <li class="list-group-item">
+      <strong>Email:</strong>
+      <span class="float-right">{{
+          cust.email }}</span>
+    </li>
+    <li class="list-group-item">
+      <strong>Country:</strong>
+      <span class="float-right">{{ cust.country }}</span>
+    </li>
+  </ul>
+  <br>
+</div>

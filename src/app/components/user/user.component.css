@@ -1,0 +1,11 @@
+.list-group {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  z-index: 2;
+  border-radius: 2rem;
+}

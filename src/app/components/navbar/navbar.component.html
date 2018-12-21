@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand text-danger" [routerLink]="['/']">ANGULAR</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" [routerLink]="['/']">HOME</a>
+              </li>
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" [routerLink]="['/user']">USER</a>
+              </li>
+              <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" [routerLink]="['/posts']">POSTS</a>
+                </li>
+              <li class="nav-item" [routerLinkActive]="['active']">
+                <a class="nav-link" [routerLink]="['/about']">ABOUT</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-0 mr-lg-2">
+            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" href="http://www.github.com/rooneyrulz">GITHUB</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+</header>

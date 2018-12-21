@@ -1,0 +1,25 @@
+<div class="my-4">
+  <h1>Posts</h1>
+  <hr>
+  <br>
+  <div class="my-2">
+    <div *ngFor="let post of posts" class="card my-3 border-danger">
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <strong>Id</strong>
+            <span class="float-right">{{ post.id }}</span>
+          </li>
+          <li class="list-group-item">
+            <strong>Title</strong>
+            <span class="float-right">{{ post.title }}</span>
+          </li>
+          <li class="list-group-item">
+            <strong>Body</strong>
+            <span class="float-right">{{ post.body }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
